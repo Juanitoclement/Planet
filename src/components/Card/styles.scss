@@ -1,0 +1,62 @@
+.planet-container {
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 10px;
+  border: 2px solid #0064d2;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px 0 rgb(48 49 53 / 16%);
+
+  .planet-header {
+    background-color: beige;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    h4 {
+      font-weight: 600;
+    }
+
+    .name {
+      color: #665d72;
+    }
+
+    .detail {
+      font-size: 14px;
+      color: #0064d2;
+      cursor: pointer;
+    }
+  }
+
+  .planet-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .show-more {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: #0064d2;
+    font-weight: 600;
+  }
+
+  .collapsible-body {
+    padding: 10px;
+
+    .detail {
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}

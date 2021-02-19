@@ -1,0 +1,31 @@
+.home-wrapper {
+
+  .loader {
+    justify-content: center;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .end-message {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 200px;
+      height: 220px;
+      margin-bottom: 20px;
+    }
+
+    h5 {
+      font-weight: 600;
+    }
+  }
+}

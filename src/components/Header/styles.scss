@@ -1,0 +1,27 @@
+.recent-search {
+  position: absolute;
+  background-color: white;
+  color: black;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -7px);
+  width: 245px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgb(48 49 53 / 16%);
+  overflow: scroll;
+  height: 180px;
+
+  .item {
+    padding: 10px;
+
+    span {
+      padding-left: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  .item:hover {
+    background-color: rgba(52, 52, 52, 0.2);
+    border-radius: 2px;
+  }
+}
