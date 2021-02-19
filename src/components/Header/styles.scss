@@ -9,7 +9,7 @@
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgb(48 49 53 / 16%);
   overflow: scroll;
-  height: 180px;
+  max-height: 180px;
 
   .item {
     padding: 10px;
