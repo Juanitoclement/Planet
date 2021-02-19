@@ -1,2 +1,5 @@
-/* http://swapi.dev/api/planets/?page=2:splat 200
-
+[[redirects]]
+from = "/*"
+to = "https://swapi.dev/api/planets/?page=2:splat"
+status = 200
+force = false
