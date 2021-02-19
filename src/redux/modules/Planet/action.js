@@ -28,11 +28,10 @@ const setPlanetFailed = (data) => ({
 
 export const fetchPlanet = (url) => (dispatch) => {
   dispatch(setPlanetLoading());
-  const updatedURL = url.replace(/^http:\/\//i, "https://");
 
   const config = {
     method: "get",
-    updatedURL,
+    url: url.replace(/^http:\/\//i, "https://"),
     headers: {
       "Content-Type": "application/json",
     },
