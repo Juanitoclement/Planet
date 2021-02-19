@@ -1,5 +1,10 @@
 .home-wrapper {
 
+  .infinite-scroll-component__outerdiv {
+    justify-content: center;
+    display: flex;
+  }
+
   .loader {
     justify-content: center;
     display: block;
