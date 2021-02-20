@@ -15,6 +15,7 @@ function HideOnScroll(props) {
 
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
+  // eslint-disable-next-line react/require-default-props
   window: PropTypes.func,
 };
 

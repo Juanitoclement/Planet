@@ -17,6 +17,7 @@ const Header = (props) => {
     setHideRecent(false);
   };
 
+  /* istanbul ignore next */
   return (
     <React.Fragment>
       <CssBaseline />

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HideOnScroll Should Render HideOnScroll 1`] = `
+<div>
+  <div>
+    Hide On Scroll
+  </div>
+</div>
+`;

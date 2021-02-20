@@ -8,12 +8,16 @@ import { fetchPlanet } from "../../redux/modules/Planet/action";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 import logoRocket from "../../assets/rocket.png";
+import { AnimatePresence } from "framer-motion";
+import { Item } from "../../components/Item";
 
 import "./styles.scss";
 
-const Home = (props) => {
+const Landing = (props) => {
   const baseUrl = `https://swapi.dev/api/planets/`;
-  const { planet, nextPage } = props;
+  const { planet, nextPage, match } = props;
+
+  let { id } = match.params;
 
   const [hasMore, setHasMore] = useState(true);
   const [planetList, setPlanetList] = useState([]);
@@ -94,10 +98,21 @@ const Home = (props) => {
           <h3 style={{ textAlign: "center" }}>&#8593; Release to refresh</h3>
         }
       >
-        {planetList.map((res, i) => {
-          return <Card data={res} key={i} keywords={keywords} />;
-        })}
+        <ul className="card-list">
+          {planetList.map((res, i) => {
+            const data = {
+              ...res,
+              keywords: keywords,
+            };
+            return <Card key={i} isSelected={res.name === id} {...data} />;
+          })}
+        </ul>
       </InfiniteScroll>
+      <AnimatePresence>
+        {id && planetList.length > 0 && (
+          <Item id={id} key="item" data={planetList} />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
@@ -117,4 +132,4 @@ const mapDispatchToProps = (dispatch) =>
     dispatch
   );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);

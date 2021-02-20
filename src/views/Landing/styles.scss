@@ -1,8 +1,18 @@
 .home-wrapper {
 
-  .infinite-scroll-component__outerdiv {
-    justify-content: center;
+  .infinite-scroll-component {
+    overflow: hidden !important;
+
+    &.__outerdiv {
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .card-list {
     display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
   }
 
   .loader {
